@@ -1,0 +1,63 @@
+{
+  "validFrom": "2019-12-16T00:00:00+01:00",
+  "validThrough": "2020-12-12T23:59:59+01:00",
+  "generatedAt": "2019-12-16T17:50:26+01:00",
+  "line": { "number": "905", "vehicletype": "Boat" },
+  "stop": { "code": "09902", "name": "NDSM", "city": "Amsterdam", "wheelchairAccessible": "Yes" },
+  "journey": {
+    "code": "905STRH",
+    "direction": "Away",
+    "origin": { "code": "NDSM", "fullname": "NDSM" },
+    "destination": { "code": "CS", "fullname": "Centraal Station" },
+    "strip": [
+      {
+        "code": "09902",
+        "name": "NDSM",
+        "city": "Amsterdam",
+        "secondsUnderway": 0,
+        "possibleTransfers": [
+          { "number": "903", "vehicletype": "Boat" },
+          { "number": "906", "vehicletype": "Boat" }
+        ]
+      },
+      {
+        "code": "09900",
+        "name": "Pontsteiger",
+        "city": "Amsterdam",
+        "secondsUnderway": 462,
+        "possibleTransfers": [
+          { "number": "900", "vehicletype": "Boat" },
+          { "number": "903", "vehicletype": "Boat" }
+        ]
+      },
+      {
+        "code": "09903",
+        "name": "Centraal Station",
+        "city": "Amsterdam",
+        "secondsUnderway": 1002,
+        "possibleTransfers": [{ "number": "906", "vehicletype": "Boat" }]
+      }
+    ]
+  },
+  "schedules": [
+    {
+      "validFor": ["weekdays"],
+      "times": [
+        { "departure": "00:02:00", "wheelchairAccessible": "Yes" },
+        { "departure": "00:38:00", "wheelchairAccessible": "Yes" },
+        { "departure": "01:14:00", "wheelchairAccessible": "Yes" },
+        { "departure": "01:49:00", "wheelchairAccessible": "Yes" }
+      ]
+    },
+    {
+      "validFor": ["saturday", "sunday"],
+      "times": [
+        { "departure": "00:04:00", "wheelchairAccessible": "Yes" },
+        { "departure": "00:49:00", "wheelchairAccessible": "Yes" },
+        { "departure": "01:34:00", "wheelchairAccessible": "Yes" },
+        { "departure": "02:19:00", "wheelchairAccessible": "Yes" },
+        { "departure": "03:04:00", "wheelchairAccessible": "Yes" }
+      ]
+    }
+  ]
+}

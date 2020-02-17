@@ -1,0 +1,12 @@
+@import './../../utils/variables';
+
+.departure {
+  background-color: $color-2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0;
+}
+.departure-link {
+  margin: 0.2em;
+}

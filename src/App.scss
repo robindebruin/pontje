@@ -1,0 +1,33 @@
+@import './utils/variables';
+
+.container {
+  /* give the outermost container a predefined size */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: $color-1;
+  background-color: $color-3;
+}
+
+.section {
+  /* flex-grow: 1; */
+  display: flex;
+  flex-direction: column;
+
+  /* for Firefox */
+  min-height: 0;
+}
+
+a {
+  color: $color-3;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  // font-variant: small-caps;
+  text-transform: uppercase;
+  font-weight: 700;
+}
