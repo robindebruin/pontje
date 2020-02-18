@@ -1,0 +1,51 @@
+{
+  "validFrom": "2020-01-23T00:00:00+01:00",
+  "validThrough": "2020-12-12T23:59:59+01:00",
+  "generatedAt": "2020-01-22T19:22:42+01:00",
+  "line": { "number": "905", "vehicletype": "Boat" },
+  "stop": { "code": "09903", "name": "Centraal Station", "city": "Amsterdam", "wheelchairAccessible": "Yes" },
+  "journey": {
+    "code": "905STRT",
+    "direction": "Return",
+    "origin": { "code": "CS", "fullname": "Centraal Station" },
+    "destination": { "code": "NDSM", "fullname": "NDSM" },
+    "strip": [
+      {
+        "code": "09903",
+        "name": "Centraal Station",
+        "city": "Amsterdam",
+        "secondsUnderway": 0,
+        "possibleTransfers": [{ "number": "906", "vehicletype": "Boat" }]
+      },
+      {
+        "code": "09902",
+        "name": "NDSM",
+        "city": "Amsterdam",
+        "secondsUnderway": 840,
+        "possibleTransfers": [
+          { "number": "903", "vehicletype": "Boat" },
+          { "number": "906", "vehicletype": "Boat" }
+        ]
+      }
+    ]
+  },
+  "schedules": [
+    {
+      "validFor": ["weekdays"],
+      "times": [
+        { "departure": "00:21:00", "wheelchairAccessible": "Yes" },
+        { "departure": "00:57:00", "wheelchairAccessible": "Yes" },
+        { "departure": "01:32:00", "wheelchairAccessible": "Yes" }
+      ]
+    },
+    {
+      "validFor": ["saturday", "sunday"],
+      "times": [
+        { "departure": "00:30:00", "wheelchairAccessible": "Yes" },
+        { "departure": "01:15:00", "wheelchairAccessible": "Yes" },
+        { "departure": "02:00:00", "wheelchairAccessible": "Yes" },
+        { "departure": "02:45:00", "wheelchairAccessible": "Yes" }
+      ]
+    }
+  ]
+}

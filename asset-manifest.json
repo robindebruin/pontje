@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/pontje/static/css/main.d0ee8873.chunk.css",
+    "main.js": "/pontje/static/js/main.019b37e0.chunk.js",
+    "main.js.map": "/pontje/static/js/main.019b37e0.chunk.js.map",
+    "runtime-main.js": "/pontje/static/js/runtime-main.9773170d.js",
+    "runtime-main.js.map": "/pontje/static/js/runtime-main.9773170d.js.map",
+    "static/js/2.45f18c30.chunk.js": "/pontje/static/js/2.45f18c30.chunk.js",
+    "static/js/2.45f18c30.chunk.js.map": "/pontje/static/js/2.45f18c30.chunk.js.map",
+    "index.html": "/pontje/index.html",
+    "precache-manifest.4aa066641bc4966a4076ba4d1a33594d.js": "/pontje/precache-manifest.4aa066641bc4966a4076ba4d1a33594d.js",
+    "service-worker.js": "/pontje/service-worker.js",
+    "static/css/main.d0ee8873.chunk.css.map": "/pontje/static/css/main.d0ee8873.chunk.css.map",
+    "static/js/2.45f18c30.chunk.js.LICENSE": "/pontje/static/js/2.45f18c30.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9773170d.js",
+    "static/js/2.45f18c30.chunk.js",
+    "static/css/main.d0ee8873.chunk.css",
+    "static/js/main.019b37e0.chunk.js"
+  ]
+}
