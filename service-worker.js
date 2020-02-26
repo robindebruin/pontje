@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pontje/precache-manifest.040622b12a9745b0398caafbe2187437.js"
+  "/pontje/precache-manifest.288475df52256975e21a0604688c020f.js"
 );
 
 self.addEventListener('message', (event) => {
