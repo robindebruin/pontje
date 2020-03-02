@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Loading() {
-  return <div>Loading..</div>;
+function Loading({ props }: any) {
+  return <div {...props}>Loading..</div>;
 }
 
 export default Loading;

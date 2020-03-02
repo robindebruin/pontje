@@ -1,12 +1,18 @@
-@import './../../utils/variables';
-
+.dep-container {
+  background-color: var(--color-2);
+}
 .departure {
-  background-color: $color-2;
+  background-color: var(--color-2);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1em 0;
+  padding: 1.8em 0;
+  flex-shrink: 0;
 }
 .departure-link {
   margin: 0.2em;
+}
+.departure-active {
+  text-decoration: underline;
+  text-underline-position: under;
 }

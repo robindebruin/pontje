@@ -1,13 +1,15 @@
-interface Harbor {
+export interface Harbor {
   name: string;
   url: string;
   dest: { port: Harbor; lines: Array<string> }[];
+  fullName: string;
 }
 
-class Harbor {
-  constructor(name, url) {
+export class Harbor {
+  constructor(name, url, fullName) {
     this.name = name;
     this.url = url;
+    this.fullName = fullName;
   }
 
   get destinations() {
@@ -23,12 +25,12 @@ class Harbor {
   }
 }
 
-const PONT_STEIGER = new Harbor('Pont steiger', 'pont-steiger');
-const CS = new Harbor('Centraal', 'centraal');
-const NDSM = new Harbor('NDSM', 'ndsm');
+const PONT_STEIGER = new Harbor('Pont steiger', 'pont-steiger', 'Pontsteiger');
+const CS = new Harbor('Centraal', 'centraal', 'Centraal Station');
+const NDSM = new Harbor('NDSM', 'ndsm', 'NDSM');
 
 NDSM.destinations = [
-  { port: CS, lines: ['905_NDM_CS', '906_NDSM_CS'] },
+  { port: CS, lines: ['905_NDSM_CS', '906_NDSM_CS'] },
   { port: PONT_STEIGER, lines: ['903_NDSM_PST'] },
 ];
 PONT_STEIGER.destinations = [{ port: NDSM, lines: ['903_PST_NDSM'] }];

@@ -1,5 +1,5 @@
 export default class Time {
-  static getTheTime() {
+  static getTheTime(): string {
     const date = new Date();
     const currentTime = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
     return currentTime;
@@ -19,13 +19,24 @@ export default class Time {
   }
 
   static getDayType(): string[] {
-    const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-    const day = new Date().getDay() - 1;
+    const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+    const day = new Date().getDay();
     let displayDay = [];
 
-    if (day < 6) {
+    if (day !== 0 && day !== 6) {
       displayDay.push('weekdays');
     }
     return [...displayDay, days[day]];
+  }
+
+  static stripSeconds(time: string): string {
+    const [hh, mm] = time.split(':');
+    return `${hh}:${mm}`;
+  }
+
+  static stripHours(time: string): string {
+    if (!time) return;
+    const [hh, mm, ss] = time.split(':');
+    return `${mm}:${ss}`;
   }
 }

@@ -1,5 +1,13 @@
-$color-2: rgb(67, 157, 221);
 $color-1: rgb(40, 100, 174);
+$color-2: rgb(67, 157, 221);
 $color-3: #ffffff;
-$color-4: #ff6966;
+$color-4: #ff6e27;
 $color-5: #313131;
+
+:root {
+  --color-1: #{$color-1};
+  --color-2: #{$color-2};
+  --color-3: #{$color-3};
+  --color-4: #{$color-4};
+  --color-5: #{$color-5};
+}

@@ -1,16 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Ports } from '../../constants/FerryRoutes';
+import { Ports, Harbor } from '../../constants/FerryRoutes';
+import DepartureHeader from '../DepartureHeader';
 
-function Departure() {
+interface Props {
+  departurePort: Harbor;
+}
+
+function Departure({ departurePort }: Props) {
+  const isActiveClass = (listName: string): string => listName === departurePort?.name && 'departure-active';
+
   return (
-    <div className="departure">
-      {Ports.map(port => (
-        <div key={port.name} className="departure-link">
-          <Link to={`/${port.url}`}>{port.name}</Link>
-        </div>
-      ))}
-    </div>
+    <>
+      <DepartureHeader title="Vertrek"></DepartureHeader>
+      <div className={`departure`}>
+        {Ports.map(port => (
+          <div key={port.name} className={`departure-link ${isActiveClass(port.name)}`}>
+            <Link to={`/${port.url}`}>{port.name}</Link>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 

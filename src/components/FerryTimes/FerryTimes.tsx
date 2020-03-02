@@ -1,21 +1,23 @@
 import React from 'react';
 import { DepTimes } from '../../constants/FerryTime.interface';
+import Time from '../../utils/time';
 
 interface Props {
-  depTimes: DepTimes;
   destinationPortName: string;
+  depTimes: DepTimes;
   closestTimeIndex: number;
 }
 
-function FerryTimes({ depTimes, closestTimeIndex = 0 }) {
+function FerryTimes({ destinationPortName = '', depTimes, closestTimeIndex = 0 }) {
   if (!depTimes) {
-    return <></>;
+    return <div className="ferry-times" />;
   }
 
   return (
     <div className="ferry-times">
-      {depTimes.map(time => (
-        <div key={time}>{time}</div>
+      {/* <div className={}>{destinationPortName}</div> */}
+      {depTimes.slice(closestTimeIndex).map(time => (
+        <div key={time}>{Time.stripSeconds(time)}</div>
       ))}
     </div>
   );
