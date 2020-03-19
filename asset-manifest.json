@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/pontje/static/css/main.d6d802e1.chunk.css",
-    "main.js": "/pontje/static/js/main.13e4d30e.chunk.js",
-    "main.js.map": "/pontje/static/js/main.13e4d30e.chunk.js.map",
+    "main.css": "/pontje/static/css/main.b1e4eb16.chunk.css",
+    "main.js": "/pontje/static/js/main.7c5a9ef1.chunk.js",
+    "main.js.map": "/pontje/static/js/main.7c5a9ef1.chunk.js.map",
     "runtime-main.js": "/pontje/static/js/runtime-main.4a3bc778.js",
     "runtime-main.js.map": "/pontje/static/js/runtime-main.4a3bc778.js.map",
-    "static/js/2.d2f4f662.chunk.js": "/pontje/static/js/2.d2f4f662.chunk.js",
-    "static/js/2.d2f4f662.chunk.js.map": "/pontje/static/js/2.d2f4f662.chunk.js.map",
+    "static/js/2.cee42926.chunk.js": "/pontje/static/js/2.cee42926.chunk.js",
+    "static/js/2.cee42926.chunk.js.map": "/pontje/static/js/2.cee42926.chunk.js.map",
     "index.html": "/pontje/index.html",
-    "precache-manifest.a84c99369c97975d903a955538a7e230.js": "/pontje/precache-manifest.a84c99369c97975d903a955538a7e230.js",
+    "precache-manifest.3cd0c72ae8160555eb64cd52cae32039.js": "/pontje/precache-manifest.3cd0c72ae8160555eb64cd52cae32039.js",
     "service-worker.js": "/pontje/service-worker.js",
-    "static/css/main.d6d802e1.chunk.css.map": "/pontje/static/css/main.d6d802e1.chunk.css.map",
-    "static/js/2.d2f4f662.chunk.js.LICENSE": "/pontje/static/js/2.d2f4f662.chunk.js.LICENSE"
+    "static/css/main.b1e4eb16.chunk.css.map": "/pontje/static/css/main.b1e4eb16.chunk.css.map",
+    "static/js/2.cee42926.chunk.js.LICENSE": "/pontje/static/js/2.cee42926.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.4a3bc778.js",
-    "static/js/2.d2f4f662.chunk.js",
-    "static/css/main.d6d802e1.chunk.css",
-    "static/js/main.13e4d30e.chunk.js"
+    "static/js/2.cee42926.chunk.js",
+    "static/css/main.b1e4eb16.chunk.css",
+    "static/js/main.7c5a9ef1.chunk.js"
   ]
 }
