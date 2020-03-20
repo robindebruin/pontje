@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dd0ddc4f2d60a20baa1776cc79de39b4",
+    "revision": "3f7441c538652843bb5a63e9f225c7bc",
     "url": "/pontje/index.html"
   },
   {
-    "revision": "d9dc1c757c1b234bf590",
-    "url": "/pontje/static/css/main.004bdbea.chunk.css"
+    "revision": "7fff6207617d1a12e44e",
+    "url": "/pontje/static/css/main.c25709f9.chunk.css"
   },
   {
     "revision": "b792fcd35a8ebe39525d",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pontje/static/js/2.c7851ae0.chunk.js.LICENSE"
   },
   {
-    "revision": "d9dc1c757c1b234bf590",
-    "url": "/pontje/static/js/main.36d032a4.chunk.js"
+    "revision": "7fff6207617d1a12e44e",
+    "url": "/pontje/static/js/main.d3c97780.chunk.js"
   },
   {
     "revision": "104687126eb9e10c7fa0",
