@@ -1,11 +1,11 @@
 import React from 'react';
-import Time from './../../utils/time';
+import Time from '../../utils/Time';
 
 function Footer({ lines }: { lines: string[] }) {
   return (
     <div className="meta-info">
       <div>
-        {Time.getDayType().map(x => x + ', ')}
+        {Time.getTheTime()} {Time.getDayType().map(x => x + ', ')}
         {lines && lines.map(line => `${line}, `)}
       </div>
     </div>

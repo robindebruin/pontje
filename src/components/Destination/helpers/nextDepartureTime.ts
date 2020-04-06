@@ -1,4 +1,4 @@
-import Time from '../../../utils/time';
+import Time from '../../../utils/Time';
 import { DepTimes, IndexOfClosestDepTime } from '../../../constants/FerryTime.interface';
 
 function nextDepartureTimeIndexes(depTimes: DepTimes, currentTime: string): IndexOfClosestDepTime[] {

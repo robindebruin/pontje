@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import { Harbor } from '../../constants/FerryRoutes';
 import FerryTimes from '../FerryTimes';
 import { FerryTime, DepTimes } from '../../constants/FerryTime.interface';
-import Time from '../../utils/time';
+import Time from '../../utils/Time';
 import Loading from '../Loading';
 import { stripDepartureTimes, matchingDestinations } from './helpers/stripDepartureTimes';
 import { nextDepartureTime, nextDepartureTimeIndex } from './helpers/nextDepartureTime';
 import Footer from './../Footer';
-import DestinationHeader from '../DestinationHeader';
+import DestinationHeader from './DestinationHeader';
 import useHttpClient from '../../hooks/useHttpClient';
+import Button from '../Button';
 
 interface Props {
   departurePort: Harbor;
@@ -54,7 +55,7 @@ function Destination({ departurePort, destinationPort }: Props) {
     setCurrentTime(Time.getTheTime());
   }, 1000);
 
-  const isActiveClass = (listName: string): string => listName === destinationPort?.name && 'destination-active';
+  const isActive = (listName: string): boolean => listName === destinationPort?.name;
 
   if (!depTimes)
     return (
@@ -66,26 +67,34 @@ function Destination({ departurePort, destinationPort }: Props) {
   return (
     <>
       <DestinationHeader title="Bestemming"></DestinationHeader>
-
       {departurePort.destinations.map(des => (
-        <div className="destination-port" key={des.port.name}>
-          <div className={`destination-row-inner-left ${isActiveClass(des.port.name)}`}>
-            <Link to={`/${departurePort.url}/${des.port.url}`}>{des.port.name}</Link>
+        <span key={des.port.name}>
+          <div className="destination-port">
+            <div className="card ">{departurePort.name}</div>
+            <div className="card card--blank"> > </div>
+            <div className="card">{des.port.name}</div>
+            <div className="card--end">
+              <div className="card">
+                <span className="counter">
+                  {Time.stripHours(nextDepartureTime(des.port.name, depTimes, currentTime))} <sup> minuten</sup>
+                </span>
+              </div>
+            </div>
           </div>
-          <div className="destination-row-inner-right">
-            {Time.stripHours(nextDepartureTime(des.port.name, depTimes, currentTime))}
-            {/* {nextDepartureTime(des.port.name, depTimes, currentTime)} */}
-            <sup> minuten</sup>
-          </div>
-        </div>
+          <div className="line"></div>
+        </span>
       ))}
-
-      <FerryTimes
-        destinationPortName={destinationPort?.name}
-        depTimes={depTimes[destinationPort?.name]}
-        closestTimeIndex={nextDepartureTimeIndex(destinationPort?.name, depTimes, currentTime)}
-      />
-      <Footer lines={departurePort.destinations.find(des => des.port === destinationPort)?.lines} />
+      <div className="times-container">
+        {departurePort.destinations.map(des => (
+          <FerryTimes
+            destinationPortName={des.port.name}
+            depTimes={depTimes[des.port.name]}
+            closestTimeIndex={nextDepartureTimeIndex(des.port.name, depTimes, currentTime)}
+            key={des.port.fullName}
+          />
+        ))}
+      </div>
+      {/* <Footer lines={departurePort.destinations.find(des => des.port === destinationPort)?.lines} /> */}
     </>
   );
 }

@@ -1,0 +1,72 @@
+{
+  "validFrom": "2020-01-23T00:00:00+01:00",
+  "validThrough": "2020-12-12T23:59:59+01:00",
+  "generatedAt": "2020-01-22T19:22:41+01:00",
+  "line": { "number": "900", "vehicletype": "Boat" },
+  "stop": { "code": "09901", "name": "Distelweg", "city": "Amsterdam", "wheelchairAccessible": "Yes" },
+  "journey": {
+    "code": "900STRH",
+    "direction": "Away",
+    "origin": { "code": "DSW", "fullname": "Distelweg" },
+    "destination": { "code": "PST", "fullname": "Pontsteiger" },
+    "strip": [
+      { "code": "09901", "name": "Distelweg", "city": "Amsterdam", "secondsUnderway": 0, "possibleTransfers": [] },
+      {
+        "code": "09900",
+        "name": "Pontsteiger",
+        "city": "Amsterdam",
+        "secondsUnderway": 360,
+        "possibleTransfers": [
+          { "number": "903", "vehicletype": "Boat" },
+          { "number": "905", "vehicletype": "Boat" }
+        ]
+      }
+    ]
+  },
+  "schedules": [
+    {
+      "validFor": ["weekdays"],
+      "times": [
+        { "departure": "06:37:00", "wheelchairAccessible": "Yes" },
+        { "departure": "07:07:00", "wheelchairAccessible": "Yes" },
+        { "departure": "07:22:00", "wheelchairAccessible": "Yes" },
+        { "departure": "07:37:00", "wheelchairAccessible": "Yes" },
+        { "departure": "07:52:00", "wheelchairAccessible": "Yes" },
+        { "departure": "08:07:00", "wheelchairAccessible": "Yes" },
+        { "departure": "08:22:00", "wheelchairAccessible": "Yes" },
+        { "departure": "08:37:00", "wheelchairAccessible": "Yes" },
+        { "departure": "08:52:00", "wheelchairAccessible": "Yes" },
+        { "departure": "09:07:00", "wheelchairAccessible": "Yes" },
+        { "departure": "09:22:00", "wheelchairAccessible": "Yes" },
+        { "departure": "09:37:00", "wheelchairAccessible": "Yes" },
+        { "departure": "09:52:00", "wheelchairAccessible": "Yes" },
+        { "departure": "10:07:00", "wheelchairAccessible": "Yes" },
+        { "departure": "10:37:00", "wheelchairAccessible": "Yes" },
+        { "departure": "11:07:00", "wheelchairAccessible": "Yes" },
+        { "departure": "11:37:00", "wheelchairAccessible": "Yes" },
+        { "departure": "12:07:00", "wheelchairAccessible": "Yes" },
+        { "departure": "12:37:00", "wheelchairAccessible": "Yes" },
+        { "departure": "13:07:00", "wheelchairAccessible": "Yes" },
+        { "departure": "13:37:00", "wheelchairAccessible": "Yes" },
+        { "departure": "14:07:00", "wheelchairAccessible": "Yes" },
+        { "departure": "14:37:00", "wheelchairAccessible": "Yes" },
+        { "departure": "15:07:00", "wheelchairAccessible": "Yes" },
+        { "departure": "15:37:00", "wheelchairAccessible": "Yes" },
+        { "departure": "16:07:00", "wheelchairAccessible": "Yes" },
+        { "departure": "16:22:00", "wheelchairAccessible": "Yes" },
+        { "departure": "16:37:00", "wheelchairAccessible": "Yes" },
+        { "departure": "16:52:00", "wheelchairAccessible": "Yes" },
+        { "departure": "17:07:00", "wheelchairAccessible": "Yes" },
+        { "departure": "17:22:00", "wheelchairAccessible": "Yes" },
+        { "departure": "17:37:00", "wheelchairAccessible": "Yes" },
+        { "departure": "17:52:00", "wheelchairAccessible": "Yes" },
+        { "departure": "18:07:00", "wheelchairAccessible": "Yes" },
+        { "departure": "18:22:00", "wheelchairAccessible": "Yes" },
+        { "departure": "18:37:00", "wheelchairAccessible": "Yes" },
+        { "departure": "18:52:00", "wheelchairAccessible": "Yes" },
+        { "departure": "19:07:00", "wheelchairAccessible": "Yes" },
+        { "departure": "19:22:00", "wheelchairAccessible": "Yes" }
+      ]
+    }
+  ]
+}

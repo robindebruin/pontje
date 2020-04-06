@@ -1,0 +1,57 @@
+$easing: cubic-bezier(0.25, 1.7, 0.35, 0.8);
+$duration: 0.5s;
+
+.arrow {
+  position: relative;
+  display: block;
+  margin: 5px auto 0;
+  height: 10px;
+  width: 38px;
+  border-radius: 2px;
+
+  &__bar {
+    position: absolute;
+    display: block;
+    border-radius: 2px;
+
+    &--left {
+      left: 0;
+      transform: rotate(35deg);
+      &:after {
+        border-radius: 6px 10px 10px 6px;
+      }
+    }
+
+    &--right {
+      left: 13px;
+      transform: rotate(-35deg);
+      &:after {
+        border-radius: 10px 6px 6px 10px;
+      }
+    }
+
+    &--right:after,
+    &--left:after {
+      content: '';
+      background-color: var(--color-3);
+      width: 25px;
+      height: 10px;
+      float: right;
+      transition: all $duration $easing;
+      z-index: -1;
+    }
+  }
+
+  &--open {
+    .arrow__bar {
+      &--left:after {
+        transform-origin: center center;
+        transform: rotate(-70deg);
+      }
+      &--right:after {
+        transform-origin: center center;
+        transform: rotate(70deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.btn {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 0.7rem;
+    border-radius: 0.4rem;
+    transition: all 0.2s;
+    box-shadow: 0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.4);
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-1);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(5px) translateX(5px);
+      box-shadow: none;
+    }
+  }
+
+  &__selected {
+    transform: none;
+    background-color: var(--color-3);
+    box-shadow: 0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.4);
+    color: var(--color-1);
+  }
+}

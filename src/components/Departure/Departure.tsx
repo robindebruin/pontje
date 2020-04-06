@@ -1,24 +1,38 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { Ports, Harbor } from '../../constants/FerryRoutes';
-import DepartureHeader from '../DepartureHeader';
+import DepartureHeader from './DepartureHeader';
+import Button from '../Button';
+import ArrowToggle from '../ArrowToggle';
 
 interface Props {
   departurePort: Harbor;
 }
 
 function Departure({ departurePort }: Props) {
-  const isActiveClass = (listName: string): string => listName === departurePort?.name && 'departure-active';
+  const [toggle, setToggle] = useState(false);
+  const history = useHistory();
+
+  const isActiveClass = (listName: string): boolean => listName === departurePort?.name;
+  const toggleExpand = () => setToggle(!toggle);
+  const onDepartureClick = port => history.push(`/${port}`);
 
   return (
     <>
       <DepartureHeader title="Vertrek"></DepartureHeader>
-      <div className={`departure`}>
+      <div className={`departure ${toggle ? 'expand' : 'decreased'}`}>
         {Ports.map(port => (
-          <div key={port.name} className={`departure-link ${isActiveClass(port.name)}`}>
-            <Link to={`/${port.url}`}>{port.name}</Link>
-          </div>
+          <span onClick={() => onDepartureClick(port.url)} key={port.name}>
+            <Button className={`departure-link `} active={isActiveClass(port.name)}>
+              {port.name}
+            </Button>
+          </span>
         ))}
+      </div>
+      <div className="toggle" onClick={toggleExpand}>
+        <div className="toggle toggle--btn">
+          <ArrowToggle open={toggle} />
+        </div>
       </div>
     </>
   );

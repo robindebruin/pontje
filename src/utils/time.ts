@@ -1,8 +1,11 @@
 export default class Time {
   static getTheTime(): string {
     const date = new Date();
-    const currentTime = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
-    return currentTime;
+    const { h, m, s } = { h: date.getHours(), m: date.getMinutes(), s: date.getSeconds() };
+    const hours = h < 10 ? '0' + h : h;
+    const minutes = m < 10 ? '0' + m : m;
+    const seconds = s < 10 ? '0' + s : s;
+    return `${hours}:${minutes}:${seconds}`;
   }
 
   static timeToDateObj(time: string): Date {
@@ -30,6 +33,7 @@ export default class Time {
   }
 
   static stripSeconds(time: string): string {
+    if (!time) return;
     const [hh, mm] = time.split(':');
     return `${hh}:${mm}`;
   }
@@ -38,5 +42,11 @@ export default class Time {
     if (!time) return;
     const [hh, mm, ss] = time.split(':');
     return `${mm}:${ss}`;
+  }
+
+  static HoursMinutes(time: string): string {
+    if (!time) return;
+    const [hh, mm, ss] = time.split(':');
+    return `over ${hh !== '00' ? hh + ' uur en' : ''} ${mm} min`;
   }
 }
