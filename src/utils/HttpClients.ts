@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios, { AxiosInstance } from 'axios';
 
-const HttpClient = axios.create({
+const HttpClient: AxiosInstance = axios.create({
   baseURL: process.env.PUBLIC_URL,
   timeout: 1000,
 });

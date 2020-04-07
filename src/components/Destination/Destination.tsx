@@ -27,7 +27,7 @@ function Destination({ departurePort, destinationPort }: Props) {
   useEffect(() => {
     setFerryTimes([]);
     const lines = departurePort.destinations.flatMap(destination => destination.lines);
-    lines.forEach(line => fetchFerryTimes(`/ferry-times/${line}.json`));
+    lines.forEach(line => fetchFerryTimes({ url: `/ferry-times/${line}.json` }));
   }, [departurePort, fetchFerryTimes]);
 
   /* For each ferryTimes strip departure times, and concat matching routes from different lines */
