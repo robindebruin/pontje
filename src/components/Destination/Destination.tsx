@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Harbor } from '../../constants/FerryRoutes';
 import FerryTimes from '../FerryTimes';
 import { FerryTime, DepTimes } from '../../constants/FerryTime.interface';
@@ -7,10 +6,8 @@ import Time from '../../utils/Time';
 import Loading from '../Loading';
 import { stripDepartureTimes, matchingDestinations } from './helpers/stripDepartureTimes';
 import { nextDepartureTime, nextDepartureTimeIndex } from './helpers/nextDepartureTime';
-import Footer from './../Footer';
 import DestinationHeader from './DestinationHeader';
 import useHttpClient from '../../hooks/useHttpClient';
-import Button from '../Button';
 
 interface Props {
   departurePort: Harbor;
@@ -55,8 +52,6 @@ function Destination({ departurePort, destinationPort }: Props) {
     setCurrentTime(Time.getTheTime());
   }, 1000);
 
-  const isActive = (listName: string): boolean => listName === destinationPort?.name;
-
   if (!depTimes)
     return (
       <div className="destination-port destination-port__loading ">
@@ -94,7 +89,6 @@ function Destination({ departurePort, destinationPort }: Props) {
           />
         ))}
       </div>
-      {/* <Footer lines={departurePort.destinations.find(des => des.port === destinationPort)?.lines} /> */}
     </>
   );
 }

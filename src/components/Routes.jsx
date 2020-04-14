@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Departure from './Departure';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import Journey from './Journey';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import { Ports } from '../constants/FerryRoutes';
+import Journey from './Journey';
 
 const ROUTES = [
   { path: '/:dep/:des', exact: false, component: Journey },

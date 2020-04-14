@@ -2,7 +2,7 @@ import { FerryTime } from '../../../constants/FerryTime.interface';
 
 export const stripDepartureTimes = (ferryTimes: FerryTime[], currentDayNames: string[]): string[] =>
   ferryTimes.reduce((acc, ferryTime) => {
-    // check if one of currentDayNames is represented in schedule.validFor
+    /* check if one of currentDayNames is represented in schedule.validFor */
     const schedules = ferryTime.schedules.filter(schedule =>
       currentDayNames.some(day => schedule.validFor.includes(day)),
     );
