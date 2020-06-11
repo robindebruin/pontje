@@ -59,6 +59,12 @@
     display: none;
   }
 }
+
 .departure-link {
   margin: 0.2em;
+}
+
+.top {
+  transition: all 0.3s;
+  padding-top: 10px !important;
 }

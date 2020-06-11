@@ -11,8 +11,10 @@
   &__title {
     text-transform: uppercase;
     color: rgb(114, 108, 108);
+    font-weight: 600;
   }
   &__time {
+    font-family: 'Source Sans Pro', sans-serif;
     &:nth-child(even) {
       background-color: rgb(221, 221, 221);
     }

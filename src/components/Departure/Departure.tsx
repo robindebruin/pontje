@@ -10,16 +10,19 @@ interface Props {
 }
 
 function Departure({ departurePort }: Props) {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
   const history = useHistory();
 
   const isActiveClass = (listName: string): boolean => listName === departurePort?.name;
   const toggleExpand = () => setToggle(!toggle);
-  const onDepartureClick = port => history.push(`/${port}`);
+  const onDepartureClick = port => {
+    setToggle(false);
+    history.push(`/${port}`);
+  };
 
   return (
     <>
-      <DepartureHeader title="Vertrek"></DepartureHeader>
+      <DepartureHeader className={`${toggle ? 'top' : ''}`} title="Kies je vertrek locatie"></DepartureHeader>
       <div className={`departure ${toggle ? 'expand' : 'decreased'}`}>
         {Ports.map(port => (
           <span onClick={() => onDepartureClick(port.url)} key={port.name}>

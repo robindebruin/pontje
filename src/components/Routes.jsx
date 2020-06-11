@@ -6,6 +6,7 @@ import Journey from './Journey';
 const ROUTES = [
   { path: '/:dep/:des', exact: false, component: Journey },
   { path: '/:dep', exact: false, component: Journey },
+  { path: '/', exact: true, component: Journey },
 ];
 
 export default class Routes extends Component {
@@ -15,7 +16,7 @@ export default class Routes extends Component {
         {ROUTES.map(route => (
           <Route {...route} key={route.path}></Route>
         ))}
-        <Redirect to={`/${Ports[0].url}`} />
+        {/* <Redirect to={`/${Ports[0].url}`} /> */}
       </Switch>
     );
   }

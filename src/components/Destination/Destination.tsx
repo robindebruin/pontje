@@ -23,14 +23,14 @@ function Destination({ departurePort, destinationPort }: Props) {
   /* On receive of a departure port fetch all matching ferry times json */
   useEffect(() => {
     setFerryTimes([]);
-    const lines = departurePort.destinations.flatMap(destination => destination.lines);
+    const lines = departurePort?.destinations.flatMap(destination => destination.lines) || [];
     lines.forEach(line => fetchFerryTimes({ url: `/ferry-times/${line}.json` }));
   }, [departurePort, fetchFerryTimes]);
 
   /* For each ferryTimes strip departure times, and concat matching routes from different lines */
   useEffect(() => {
     let departureTimes: DepTimes;
-    departurePort.destinations.forEach(destination => {
+    departurePort?.destinations.forEach(destination => {
       const filterFerryTimes = matchingDestinations(destination, ferryTimes);
       departureTimes = {
         ...departureTimes,
@@ -52,32 +52,33 @@ function Destination({ departurePort, destinationPort }: Props) {
     setCurrentTime(Time.getTheTime());
   }, 1000);
 
-  if (!depTimes)
-    return (
-      <div className="destination-port destination-port__loading ">
-        <Loading />
-      </div>
-    );
+  if (!depTimes) return <div className="destination-port destination-port__loading "></div>;
 
   return (
     <>
       <DestinationHeader title="Bestemming"></DestinationHeader>
       {departurePort.destinations.map(des => (
-        <span key={des.port.name}>
-          <div className="destination-port">
+        // <div key={des.port.name}>
+        <>
+          <div key={des.port.name} className="destination-port">
             <div className="card ">{departurePort.name}</div>
             <div className="card card--blank"> > </div>
             <div className="card">{des.port.name}</div>
             <div className="card--end">
-              <div className="card">
+              <div className="card card--time">
+                <span className="card--time__info">gaat over</span>
+
                 <span className="counter">
-                  {Time.stripHours(nextDepartureTime(des.port.name, depTimes, currentTime))} <sup> minuten</sup>
+                  {Time.stripHours(nextDepartureTime(des.port.name, depTimes, currentTime))}
                 </span>
+                <span className="card--time__info">min</span>
               </div>
             </div>
           </div>
           <div className="line"></div>
-        </span>
+
+          {/* </div> */}
+        </>
       ))}
       <div className="times-container">
         {departurePort.destinations.map(des => (

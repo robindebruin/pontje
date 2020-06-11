@@ -6,6 +6,7 @@ const divStyle: CSS.Properties = {
   color: 'var(--color-3)',
   padding: '0 0 0 0.5em',
   fontVariantCaps: 'all-small-caps',
+  fontSize: '20px',
 };
 
 function DestinationHeader({ title }) {

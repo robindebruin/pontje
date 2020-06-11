@@ -6,11 +6,13 @@ const divStyle: CSS.Properties = {
   color: 'var(--color-3)',
   padding: '0.1em 0 0 0.5em',
   fontVariantCaps: 'all-small-caps',
+  fontSize: '20px',
+  fontWeight: 'bolder',
 };
 
-function DepartureHeader({ title }) {
+function DepartureHeader({ title, ...rest }) {
   return (
-    <div style={divStyle}>
+    <div style={divStyle} {...rest}>
       <div> {title}</div>
     </div>
   );
