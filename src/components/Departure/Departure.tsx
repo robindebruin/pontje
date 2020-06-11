@@ -10,13 +10,12 @@ interface Props {
 }
 
 function Departure({ departurePort }: Props) {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(departurePort ? false : true);
   const history = useHistory();
 
   const isActiveClass = (listName: string): boolean => listName === departurePort?.name;
   const toggleExpand = () => setToggle(!toggle);
   const onDepartureClick = port => {
-    setToggle(false);
     history.push(`/${port}`);
   };
 

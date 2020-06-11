@@ -58,9 +58,8 @@ function Destination({ departurePort, destinationPort }: Props) {
     <>
       <DestinationHeader title="Bestemming"></DestinationHeader>
       {departurePort.destinations.map(des => (
-        // <div key={des.port.name}>
-        <>
-          <div key={des.port.name} className="destination-port">
+        <div key={des.port.name}>
+          <div className="destination-port">
             <div className="card ">{departurePort.name}</div>
             <div className="card card--blank"> > </div>
             <div className="card">{des.port.name}</div>
@@ -76,9 +75,7 @@ function Destination({ departurePort, destinationPort }: Props) {
             </div>
           </div>
           <div className="line"></div>
-
-          {/* </div> */}
-        </>
+        </div>
       ))}
       <div className="times-container">
         {departurePort.destinations.map(des => (
